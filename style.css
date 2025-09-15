@@ -26,6 +26,8 @@ h1,h2{
     display:flex;
     justify-content: space-around;
     margin:20px 30px;
+    border:1px solid white;
+    border-radius: 5px;
     animation: navbarAnime 2s ease-in;
     
     
@@ -114,7 +116,7 @@ form button{
 .box {
   width: 200px;
   height: 150px;
-  background-color: #3498db;
+  background-color:white;
   margin-top: 50px;
   transition: background-color 1s linear;
 
