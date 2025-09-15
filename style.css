@@ -1,0 +1,144 @@
+*{ 
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --background-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --accent-color: #66b3ff;
+}
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1,h2{
+    text-align:center;
+    margin-top: 50px;
+    text-decoration: underline;
+    color:var(--accent-color);
+}
+
+
+/*PART 1 CSS TRANSITION AND ANIMATION*/
+.navbar{
+    display:flex;
+    justify-content: space-around;
+    margin:20px 30px;
+    animation: navbarAnime 2s ease-in;
+    
+    
+}
+.navbar a{
+    text-decoration:none ;
+    padding:15px;
+    font-size: 20px;
+    color: var(--text-color);
+    border-radius: 2px;
+    transition: background-color 2s ease-in-out;/*APPLIES BACKGROUND TRANSITION WHEN THE LINKS ON HOVER*/
+    
+}
+.navbar a:hover{
+    background-color: var(--accent-color);/*NAVBAR LINKS APPLIES A BACKGROUND COLOR ON HOVER*/
+    color:var(--text-color);
+    
+}
+/*Animation Bounce on the navBar*/
+@keyframes navbarAnime{
+    10%{
+        transform:translateY(-100px);
+    }
+
+    50%{
+        transform: translateY(-75px);
+    }
+    
+    90%{
+        transform:translateY(-25px)
+    }
+
+    30%,70%,100%{
+        transform: translateY(0);
+
+    }
+}
+
+
+
+/*PART 2*/
+form{
+  
+    width:250px;
+    background-color: rgb(75, 94, 87);
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    
+}
+form p{
+    text-align: center;
+    font-size: 20px;
+}
+
+.fields{
+    display:flex;
+    width:100%;
+    font-size:20px;
+}
+
+form button{
+    width:100%;
+    padding:10px;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    color: #f0f0f0;
+}
+
+
+/* PART 3*/
+
+
+.hero{
+    width:80%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    align-content: space-around;
+    
+    
+}
+
+.box {
+  width: 200px;
+  height: 150px;
+  background-color: #3498db;
+  margin-top: 50px;
+  transition: background-color 1s linear;
+
+  
+
+}
+
+.box.animate {
+background-color: rgb(194, 222, 16); 
+  animation: rotate 2s ease-in-out forwards;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(360deg); }
+  100% { transform:rotate(0deg); 
+}
+}
+.animateBtn{
+    margin-top: 20px;
+    padding:10px;
+    background-color: var(--accent-color);
+    color: #f0f0f0;
+    border: none;
+    
+}
+
+
